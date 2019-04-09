@@ -1,8 +1,15 @@
 
 /*
     this program simulate a dfa
-    for more information please read
-    readme file in this directory
+    
+    it takes a string as input and
+    checks that it ends with "abb"
+    this automata has 4 states {0, 1, 2, 3}
+    with this alphabet {a, b}
+    the move function contains the transition function
+    of this  automata
+    the initial state is 0 
+
 */
 
 #include <iostream>
@@ -37,20 +44,23 @@ int main(){
         state = move(state, ch);
     }
     if (state == final_state)
-        print("yes");
+        print("yes it ends with abb");
     else if (state == -1)
         print("error invalid character: " << ch);
     else 
-        print("no");
+        print("no it does not end with abb");
 
     return 0;
 }
 
 // change the state of automata
 int move(int state, char ch){
+    // state is current state
+    // ch is the input character
     
     switch(state) {
         
+        // automata state 0
         case 0:
             if (ch == 'a') state = 1;
             else if (ch == 'b') state = 0;
@@ -58,6 +68,7 @@ int move(int state, char ch){
 
             break;
 
+        // automata state 1
         case 1:
             if (ch == 'a') state = 1;
             else if ( ch == 'b') state = 2;
@@ -65,6 +76,7 @@ int move(int state, char ch){
 
             break;
 
+        // automata state 2
         case 2:
             if (ch == 'a') state = 1;
             else if (ch == 'b') state = 3;
@@ -72,6 +84,7 @@ int move(int state, char ch){
 
             break;
     
+        // automata state 3
         case 3:
             if (ch == 'a') state = 1;
             else if (ch == 'b') state = 0;

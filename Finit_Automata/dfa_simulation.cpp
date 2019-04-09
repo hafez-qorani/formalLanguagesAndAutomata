@@ -1,6 +1,8 @@
 
 /*
     this program simulate a dfa
+    for more information please read
+    readme file in this directory
 */
 
 #include <iostream>

@@ -1,5 +1,5 @@
 
-#### dfa_simulate.cpp
+#### dfa_simulation.cpp
 this code simulates the below automata
 the program takes a string and validate the string
 in according to the automata

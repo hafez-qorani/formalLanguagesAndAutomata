@@ -19,15 +19,15 @@ class Set{
 	void addMember(T);
 
 	// does the intersection operation with another set
-	Set intersect(Set);
+	/* Set intersect(Set); */
 
 	// does the union opration with another set
-	Set union(Set);
+	/* Set union(Set); */
 
 	// multiply this set with the specified one
-	Set multiply(Set);	
+	/* Set multiply(Set); */	
 
-	bool isAMember(T);
+	/* bool isMember(T); */
 }
 
 template <class T>
